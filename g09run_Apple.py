@@ -3,26 +3,6 @@ from g09_write import write_g09
 from ssh_client import ssh_conn
 from text_file_creator import infile_2_outfile
 
-# List of functions to import
-# They're also included below the string
-# Some other random stuff to
-''' 
-Random
-------
-MARCC address = '162.129.223.17' OR 'login.marcc.jhu.edu'
-terminal command to connect (me) = 'ssh login.marcc.jhu.edu -l sdawley1@jhu.edu'
-
-Imports
--------
-from g09_write import write_g09
-from txt_sh_file_creator import infile_2_outfile
-
-Dependencies (also just refer to the imports)
-------------
-paramiko
-os
-socket
-'''
 # I'm just gonna put this here in case there's some error
 # and I don't have it run at the end of my last function
 os.system('stty echo')
