@@ -29,7 +29,7 @@ def ssh_conn(hostname, username, transferFile, port=22):
     try:
         transport = paramiko.Transport(sock)
         transport.start_client()
-        transport.auth_interactive_dumb(username=username)  # , handler=handler)
+        transport.auth_interactive_dumb(username=username)
         print('Connecting...\n')
     except paramiko.AuthenticationException:
         print('Failed Authentication. Exiting...')
@@ -62,7 +62,6 @@ def ssh_conn(hostname, username, transferFile, port=22):
         transport.close()
         os.system('stty echo')
     try:
-        # channel.exec_command('sbatch {}'.format(transferFile))  # THIS WORKS
         channel.exec_command('sbatch {}'.format(transferFile))  # THIS WORKS
         channel.close()
     except paramiko.SSHException:
@@ -81,8 +80,9 @@ def ssh_conn(hostname, username, transferFile, port=22):
     return
 
 if __name__ == '__main__':
-    hostname = 'login.marcc.jhu.edu'
-    username = 'sdawley1@jhu.edu'
-    transferFile = 'TEST_FILE.sh'
+    # Fill these in I suppose
+    hostname = ''
+    username = ''
+    transferFile = ''
     os.system('')
     ssh_conn(hostname, username, transferFile, port=22)
