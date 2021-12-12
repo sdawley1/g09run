@@ -38,7 +38,7 @@ While writing this, I discovered that the most helpful function I (accidently) i
 
 Another point that I think is important to make even though it rarely becomes an issue is the storage of the public key the SSH server and your machine exchange during the initial authentication. This public key is stored locally *only after you've connected to the server once*. So, don't try and use this program the very first time you're uploading data to MARCC. Moreover, this key is stored at `~/.ssh/known_hosts` which is hidden file. Accessing this file illustrates the type of key encryption used by the SSH server and informed some of the decisions about authenticating the server to allow our machine to connect.
 
-### Closing Remarks
+### The Rest of What I Have to Say
 
 As it stands, the current design works best for uploading one file at a time. Altering this to allow uploading any number of files at a single time, in theory, shouldn't be all that difficult, but I want to at least master the single file-upload before getting fancy. Additionally, entering the user data everytime will get old, if it hasn't already. Manipulating the code (or asking me to do it which is also cool) to alter the number of parameters required to be entered by the user isn't hard whatsoever, and the only reason I avoided simplifying that part of `write_g09` was because I wanted to make the program as general as possible, omitting none of the possible parameters.
 
