@@ -28,7 +28,6 @@ def write_g09():
             print('Email address must end in \'@jhu.edu\'')
         else:
             break 
-    # Time to reserve (6 for Eric, 24 for Calvin) ('time')
     while True:
         try:
             temp = input('Enter hours (integer): ')
@@ -38,7 +37,6 @@ def write_g09():
             print('Please enter a valid integer')
         else:
             break
-    # Nodes to reserve ('nodes')
     while True:
         try:
             user_info['nodes'] = input('Enter # of nodes to reserve: ')
@@ -47,7 +45,6 @@ def write_g09():
             print('Please submit an integer number of nodes')
         else:
             break
-    # Number of tasks per node ('ntasks-per-node')
     while True:
         try:
             user_info['npnode'] = input('Enter ntasks-per-node: ')
@@ -56,7 +53,6 @@ def write_g09():
             print('Please submit an integer number of ntasks-per-node')
         else:
             break
-    # Memory to reserve (80 for Eric, 100 for Calvin) ('mem')
     while True:
         try:
             temp_mem = input('Enter an integer memory value to reserve (implied GB units): ')
@@ -66,7 +62,7 @@ def write_g09():
             print('Please submit an integer memory value')
         else:
             break
-    # Name of .gjf file ('pTbth' for Me) ('______.gjf')
+    # Name of .gjf file
     user_info['filename'] = input('Enter name of .gjf file to process (DO NOT INCLUDE EXTENSION): ')
     gjf_filename = user_info['filename'] + '.gjf'
 
