@@ -24,13 +24,11 @@ For all of these dependencies, installing is as simple as running `pip install [
 
 ### The Code
 
-There are three primary helper functions:
+There are three key aspects of the program: Opening a `socket`, initializing a `transport`, and beginning the secure file transfer protocol (SFTP). The `socket` allows communication between two different machines and forms the basis of every other communication channel that’s built between the local machine and the remote server. In our case, the socket is allowing our machine (the client) to request commands be performed on a remote server (MARCC). The particular type of socket I used was a STREAM socket which guarantees the delivery of information in the same order it was sent. This is important because otherwise we might try and submit a job request to MARCC before the data was uploaded via SFTP by accident.
 
-`write_g09_shared()` attains all necessary information from the user and stores 1) all of that information to be referenced later and 2) the filepath to store the `.sh` file that we're actually interested in uploading to MARCC. This is called in the first part of the program and is 'low stakes', for lack of a better phrase. At the end of inputting your information there's an option to review and even ditch all of it and restart from the beginning. That being said, the primary portion of the program relies heavily on this information being accurate. 
+The `transport` attaches to the socket we just built and authenticates our machine, so the server bothers to interact with us. The transport channel is what transfers data from our machine to the server, such as commands, data structures, and filenames. Commands are passed through the shell. Though, the only pieces of data we need to transport along this channel are the filenames and command to submit the job request. The literal files are passed along through the SFTP.
 
-`infile_outfile_shared()` takes the information attained in `write_g09_shared()` and makes the files that we need to tell MARCC what to do. Neither user input nor extra dependencies are required to make this work. Just some print statements.
-
-If this program was like the most recent season of SNL, `ssh_shared()` would be like Cecily Strong. It connects us with the SSH server, establishes an SFTP, transfers the files, and requests a job from MARCC. Here we rely on `paramiko`, an absolutely incredible library that uses a few other cryptography-based libraries to maintain security and make connecting to an SSH server a breeze, even with two-factor authentication. This is probably a good time to mention that using two-factor authentication is still required. This is the point in the program where the most possible errors can occur. Authenticating to the server, opening a channel for SFTP, transferring files, and executing commands over the SSH all offer a way to raise a different kind of exception. So, although the code to just connect to the server and transfer files is less than ten lines or so, the error handling (that I tried my best to implement) took up a majority of the time spent writing the program. 
+The SFTP is established through a transport channel. The files are uploaded to the server and the command to submit them is processed next.
 
 ### Possible Troubleshooting
 
