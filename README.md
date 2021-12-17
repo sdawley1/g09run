@@ -28,7 +28,7 @@ There are three key aspects of the program: Opening a `socket`, initializing a `
 
 The `transport` attaches to the socket we just built and authenticates our machine, so the server bothers to interact with us. The transport channel is what transfers data from our machine to the server, such as commands, data structures, and filenames. Commands are passed through the shell. Though, the only pieces of data we need to transport along this channel are the filenames and command to submit the job request. The literal files are passed along through the SFTP.
 
-The SFTP is established through a transport channel. The files are uploaded to the server and the command to submit them is processed next.
+The SFTP is established through a transport channel. The files are uploaded to the server and the command to submit them is processed next. Unfortunately, every command and file transfer asked of the server automatically closes the channel which performed the command. So, a new channel must be established after each command in the case of uploading multiple files at a time. Although this isn't a massive problem, it significantly increases the runtime of the program with each file that is uploaded for a job request, hence the wait between transferring and submitting individual files.
 
 ### Possible Troubleshooting
 
