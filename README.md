@@ -40,7 +40,7 @@ Another point that I think is important to make even though it rarely becomes an
 
 As it stands, the program works for 'shared' job submission with a particular set of nodes, tasks per node, and allotted time. In the future, however, I'd like to add more types of jobs with particular sets of parameters. This issue could be overcome by allowing the user to enter the type of job alongside all default parameters, but that wouldn't be the most efficient way of doing it (I feel). Also, the retrieval of data files from the SSH server isn't implemented as of yet. I don't think this aspect of using MARCC is as cumbersome, though, so it isn't a top priority of mine. I would like to implement this into the program eventually and with the connection to the SSH already figured out it shouldn't be difficult.
 
-Lastly,
+Lastly, developing a method which foregoes having to enter a verification code at each authentication to the server will increase the efficiency of the program greatly. The [AutoTFA](https://github.com/tmcqueen-materials/autotfa) repository is an excellent way to add this feature, however, I'd like to be sure of the legality of this method before implementing it.
 
 12/17/2021: Currently, I'm in the process of creating classes for each type of partition offered by SLURM (the queuing system used by MARCC) which will ultimately make the process of submitting different types of job requests easier. In addition, writing the `.sh` file with these different types of jobs and partitions must be rethought.
 
