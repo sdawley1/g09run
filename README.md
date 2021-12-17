@@ -34,11 +34,13 @@ The SFTP is established through a transport channel. The files are uploaded to t
 
 I discovered that the most helpful function which I (accidently) implemented was `paramiko.util.log_to_file()` which writes to a `.log` file everything that is communicated between our machine and the SSH. Running the program automatically creates the file `SSHConnection.log` which contains all of this information and if you know what to look for (which, frankly, I don't even really know what to look for I just search for keywords like 'sftp', etc.), troubleshooting becomes immensely easier.
 
-Another point that I think is important to make even though it rarely becomes an issue is the storage of the public key the SSH server and your machine exchange during the initial authentication. This public key is stored locally *only after you've connected to the server once*. So, don't try and use this program the very first time you're uploading data to MARCC. Moreover, this key is stored at `~/.ssh/known_hosts` which is hidden file. Accessing this file illustrates the type of key encryption used by the SSH server and informed some of the decisions about authenticating the server to allow our machine to connect. Also, it contains the server address anD IP which is helpful if you ever forget it.
+Another point that I think is important to make even though it rarely becomes an issue is the storage of the public key the SSH server and your machine exchange during the initial authentication. This public key is stored locally *only after you've connected to the server once*. So, don't try and use this program the very first time you're uploading data to MARCC. Moreover, this key is stored at `~/.ssh/known_hosts` which is hidden file. Accessing this file illustrates the type of key encryption used by the SSH server and informed some of the decisions about authenticating the server to allow our machine to connect. Also, it contains the server address and IP which is helpful if you ever forget it.
 
 ### Future Goals
 
-As it stands, the program works for 'shared' job submission with a particular setof nodes, tasks per node, and allotted time. In the future, however, I'd like to add more types of jobs with particular sets of parameters. This issue could be overcome by allowing the user to enter the type of job alongside all default parameters, but that wouldn't be the most efficient way of doing it (I feel). 
+As it stands, the program works for 'shared' job submission with a particular set of nodes, tasks per node, and allotted time. In the future, however, I'd like to add more types of jobs with particular sets of parameters. This issue could be overcome by allowing the user to enter the type of job alongside all default parameters, but that wouldn't be the most efficient way of doing it (I feel). 
+
+12/17/2021: Currently, I'm in the process of creating classes for each type of partition offered by SLURM (the queuing system used by MARCC) which will ultimately make the process of submitting different types of job requests easier. In addition, writing the `.sh` file with these different types of jobs and partitions must be rethought.
 
 
 
