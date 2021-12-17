@@ -5,7 +5,7 @@ Normally I like to spend time on things I'm passionate about, like chemistry, or
 
 In particular, this program is designed to optimize communication with MARCC and the upload of data acquired in Gaussian09 to the SSH server to be analyzed.
 
-If there are any problems, fixes, optimizations, etc. anyone has to offer, feel free to email me: sdawley1@jhu.edu
+If there are any problems, fixes, optimizations, etc. anyone has to offer, feel free email me: sdawley1@jhu.edu. Otherwise, submitting a pull request is always an option.
 
 Also, I'll note that this program (and this README, I suppose) were all made with Mac in mind (part of the spite thing). I'm sure anyone with even a remote knowledge of Python can alter anything to have it fit their machine, though.
 
