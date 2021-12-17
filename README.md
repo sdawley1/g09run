@@ -32,9 +32,12 @@ The SFTP is established through a transport channel. The files are uploaded to t
 
 ### Possible Troubleshooting
 
+I figured I'd take a moment to mention a possible issue that users might be having (I certainly had it before using Python) regarding the `.sh` file creation. MARCC interprets these files in such a way that it matters whether the text editor you're using utilizes 'newline' (or 'line feeed') characters, `\n`, or 'line carriage' characters, `\r`, for line breaks. On a Mac, TextEdit uses the wrong type of line break character (I think it's `\n`, though I'm not completely sure) whereas if you use a program such as NotePad++ the line break character corresponds to that interpretated by MARCC. So, if you're having an issue with newline characters this is why. However, using this automated process overcomes that issue. Moreover, if this ever *does* become an issue, this is why.
+
 I discovered that the most helpful function which I (accidently) implemented was `paramiko.util.log_to_file()` which writes to a `.log` file everything that is communicated between our machine and the SSH. Running the program automatically creates the file `SSHConnection.log` which contains all of this information and if you know what to look for (which, frankly, I don't even really know what to look for I just search for keywords like 'sftp', etc.), troubleshooting becomes immensely easier.
 
 Another point that I think is important to make even though it rarely becomes an issue is the storage of the public key the SSH server and your machine exchange during the initial authentication. This public key is stored locally *only after you've connected to the server once*. So, don't try and use this program the very first time you're uploading data to MARCC. Moreover, this key is stored at `~/.ssh/known_hosts` which is hidden file. Accessing this file illustrates the type of key encryption used by the SSH server and informed some of the decisions about authenticating the server to allow our machine to connect. Also, it contains the server address and IP which is helpful if you ever forget it.
+
 
 ### Future Goals
 
