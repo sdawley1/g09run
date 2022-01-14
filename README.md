@@ -47,6 +47,8 @@ Lastly, developing a method which foregoes having to enter a verification code a
 
 12/17/2021: Currently, I'm in the process of creating classes for each type of partition offered by SLURM (the queuing system used by MARCC) which will ultimately make the process of submitting different types of job requests easier. In addition, writing the `.sh` file with these different types of jobs and partitions must be rethought.
 
+1/14/2021: With break between semesters in full swing, I've been taking some time to try and make the program more accessible. Instead of trying to over-engineer the code (which will probably be beneficial at least at first considering I'm still learning Python), I'm in the process of building a simple website using HTML which will make job submission even easier than it was before.
+
 
 
 
