@@ -21,9 +21,14 @@ If there are any problems, fixes, optimizations, etc. anyone has to offer, feel 
 
 For all of these dependencies, installing is as simple as running `pip install [LIBRARY]` in the command line. The website for each library is linked, all of which have installation instructions. If you're interested in checking the libraries already installed on your computer, you can run `pip list` from the command line.
 
-# Installation Instructions
+## Installation Instructions
 
-Installing the program can be done by cloning this repository to your local machine, navigating to the `g09` directory and running the command `python manage.py runserver` from the command line. Then, in your browser go to [http://localhost:8000](http://localhost:8000) to enter the site. The home page should look something like this: (Hopefully I didn't forget to insert the picutre).
+Installing the program can be done by cloning this repository to your local machine, navigating to the `g09` directory and running the command `python manage.py runserver` from the command line. Then, in your browser go to [http://localhost:8000](http://localhost:8000) to enter the site. The home page should look something like this: (Hopefully I didn't forget to insert the picture).
+
+In case anyone finds it useful, here are explicit steps to setting up and running the site:
+
+1. One
+2. Two
 
 ## Some Commentary and Guidelines
 
