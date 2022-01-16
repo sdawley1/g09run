@@ -7,20 +7,23 @@ In particular, this program is designed to optimize communication with MARCC and
 
 If there are any problems, fixes, optimizations, etc. anyone has to offer, feel free email me: sdawley1@jhu.edu. Otherwise, submitting a pull request is always an option.
 
-Also, I'll note that this program (and this README, I suppose) were all made with Mac in mind (part of the spite thing). I'm sure anyone with even a remote knowledge of Python can alter anything to have it fit their machine, though.
-
 ## Dependencies
 [Python](https://www.python.org/) 3.0+ 
 
-[Paramiko](https://www.paramiko.org/index.html) 2.8.0 (Primary means of communicating with the SSH server and opening an SFTP)
-
 [Cryptography](https://cryptography.io/en/latest/) 3.4.7
-
-[PyNaCl](https://pypi.org/project/PyNaCl/) 1.4.0
 
 [Django](https://www.djangoproject.com/) 4.0.1
 
+[Paramiko](https://www.paramiko.org/index.html) 2.8.0 (Primary means of communicating with the SSH server and opening an SFTP)
+
+[PyNaCl](https://pypi.org/project/PyNaCl/) 1.4.0
+
+
 For all of these dependencies, installing is as simple as running `pip install [LIBRARY]` in the command line. The website for each library is linked, all of which have installation instructions. If you're interested in checking the libraries already installed on your computer, you can run `pip list` from the command line.
+
+# Installation Instructions
+
+Installing the program can be done by cloning this repository to your local machine, navigating to the `g09` directory and running the command `python manage.py runserver` from the command line. Then, in your browser go to [http://localhost:8000] to enter the site. The home page should look something like this: (Hopefully I didn't forget to insert the picutre).
 
 ## Some Commentary and Guidelines
 
