@@ -5,7 +5,7 @@ Normally I like to spend time on things I'm passionate about, like chemistry, or
 
 In particular, this program is designed to optimize communication with MARCC and the upload of data acquired in Gaussian09 to the SSH server to be analyzed.
 
-If there are any problems, fixes, optimizations, etc. anyone has to offer, feel free email me: sdawley1@jhu.edu. Otherwise, submitting a pull request is always an option.
+If there are any problems, fixes, optimizations, etc. anyone has to offer, feel free email me: [sdawley1@jhu.edu](mailto:sdawley1@jhu.edu%20subject=g09%20Repository). Otherwise, submitting a pull request is always an option.
 
 ## Dependencies
 [Python](https://www.python.org/) 3.0+ 
@@ -27,8 +27,13 @@ Installing the program can be done by cloning this repository to your local mach
 
 In case anyone finds it useful, here are explicit steps to setting up and running the site:
 
-1. One
-2. Two
+1. Above the list of files on the main page of this repository, click the 'Code' button. Using 'Clone with HTTPS', copy the provided link.
+2. Navigate to the command line (terminal on Mac) and change the current working directory to where you'd like the folder to be saved on your machine. By default, the folder will be saved to your home directory.
+3. Type `$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY` and paste the url copied earlier. Press enter to create the local clone.
+4. Navigate to the folder we just installed (in this repository it's named `g09`) and from the command line run `$ python manage.py runserver`. Then, in your browser go to the link [http://localhost:8000](http://localhost:8000) to enter the site.
+
+More detailed repository-cloning instructions can be found [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+but I provided them here as well for clarity.
 
 ## Some Commentary and Guidelines
 
@@ -51,13 +56,11 @@ Another point that I think is important to make even though it rarely becomes an
 
 ### Future Goals
 
-As it stands, the program works for 'shared' job submission with a particular set of nodes, tasks per node, and allotted time. In the future, however, I'd like to add more types of jobs with particular sets of parameters. This issue could be overcome by allowing the user to enter the type of job alongside all default parameters, but that wouldn't be the most efficient way of doing it (I feel). Also, the retrieval of data files from the SSH server isn't implemented as of yet. I don't think this aspect of using MARCC is as cumbersome, though, so it isn't a top priority of mine. I would like to implement this into the program eventually and with the connection to the SSH already figured out it shouldn't be difficult.
+The retrieval of data files from the SSH server isn't implemented as of yet. I don't think this aspect of using MARCC is as cumbersome, though, so it isn't a top priority of mine. I would like to implement this into the program eventually and with the connection to the SSH already figured out it shouldn't be difficult.
 
-Lastly, developing a method which foregoes having to enter a verification code at each authentication to the server will increase the efficiency of the program greatly. The [AutoTFA](https://github.com/tmcqueen-materials/autotfa) repository is an excellent way to add this feature, however, I'd like to be sure of the legality of this method before implementing it.
+Also, developing a method which foregoes having to enter a verification code at each authentication to the server will increase the efficiency of the program greatly. The [AutoTFA](https://github.com/tmcqueen-materials/autotfa) repository is an excellent way to add this feature, however, I'd like to be sure of the legality of this method before implementing it.
 
-12/17/2021: Currently, I'm in the process of creating classes for each type of partition offered by SLURM (the queuing system used by MARCC) which will ultimately make the process of submitting different types of job requests easier. In addition, writing the `.sh` file with these different types of jobs and partitions must be rethought.
-
-1/14/2021: With break between semesters in full swing, I've been taking some time to try and make the program more accessible. Instead of trying to over-engineer the code (which will probably be beneficial at least at first considering I'm still learning Python), I'm in the process of building a simple website using HTML which will make job submission even easier than it was before.
+If you have any suggestions or would like to help implement any of these features please feel free to reach out here or at the email I provided above.
 
 
 
