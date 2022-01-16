@@ -18,6 +18,8 @@ Also, I'll note that this program (and this README, I suppose) were all made wit
 
 [PyNaCl](https://pypi.org/project/PyNaCl/) 1.4.0
 
+[Django](https://www.djangoproject.com/) 4.0.1
+
 For all of these dependencies, installing is as simple as running `pip install [LIBRARY]` in the command line. The website for each library is linked, all of which have installation instructions. If you're interested in checking the libraries already installed on your computer, you can run `pip list` from the command line.
 
 ## Some Commentary and Guidelines
