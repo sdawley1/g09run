@@ -5,7 +5,7 @@ Normally I like to spend time on things I'm passionate about, like chemistry, or
 
 In particular, this program is designed to optimize communication with MARCC and the upload of data acquired in Gaussian09 to the SSH server to be analyzed.
 
-If there are any problems, fixes, optimizations, etc. anyone has to offer, feel free email me: [sdawley1@jhu.edu](mailto:sdawley1@jhu.edu%20subject=g09%20Repository). Otherwise, submitting a pull request is always an option.
+If there are any problems, fixes, optimizations, etc. anyone has to offer, feel free email me: [sdawley1@jhu.edu](mailto:sdawley1@jhu.edu). Otherwise, submitting a pull request is always an option.
 
 ## Dependencies
 [Python](https://www.python.org/) 3.0+ 
