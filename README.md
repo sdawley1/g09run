@@ -32,7 +32,7 @@ In case anyone finds it useful, here are explicit steps to setting up and runnin
 3. Enter `$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY` with the url copied earlier. Press enter to create a local clone of the repository.
 4. Navigate to the folder we just installed (here it's named `g09`) and from the command line run `$ python manage.py makemigrations`. It'll be obvious if any errors occur.
 5. Within the same directory run the command `$ python manage.py migrate`. Again, should be pretty obvious if things are working up to this point.
-6. Finally, run the command `$ python manage.py runserver`. Then, in your browser go to the link [http://localhost:8000](http://localhost:8000) to enter the site.
+6. Finally, within the same directory, run the command `$ python manage.py runserver`. Then, in your browser go to the link [http://localhost:8000](http://localhost:8000) to enter the site.
 
 More detailed repository-cloning instructions can be found [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 but I provided them here as well for clarity.
