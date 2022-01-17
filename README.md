@@ -23,7 +23,8 @@ For all of these dependencies, installing is as simple as running `pip install [
 
 ## Installation Instructions
 
-Installing the program can be done by cloning this repository to your local machine, navigating to the `g09` directory and running the command `python manage.py runserver` from the command line. Then, in your browser go to [http://localhost:8000](http://localhost:8000) to enter the site. The home page should look something like this: (Hopefully I didn't forget to insert the picture).
+Installing the program can be done by cloning this repository to your local machine, navigating to the `g09` directory and running the command `python manage.py runserver` from the command line. Then, in your browser go to [http://localhost:8000](http://localhost:8000) to enter the site. The home page should look something like this:
+<img width="992" alt="Screen Shot 2022-01-17 at 12 00 00 AM" src="https://user-images.githubusercontent.com/92101227/149710765-f6f02404-605d-4e1d-bb91-1ac1d26848d1.png">
 
 In case anyone finds it useful, here are explicit steps to setting up and running the site:
 
