@@ -3,38 +3,33 @@
 ## Brief Background
 Normally I like to spend time on things I'm passionate about, like chemistry, or... that's about it. Today, however, I've taken on a spite-driven project to try and automate uploading files to the Maryland Advanced Research Computing Center (MARCC).
 
-In particular, this program is designed to optimize communication with MARCC and the upload of data acquired in Gaussian09 to the SSH server to be analyzed.
+In particular, this program is designed to optimize communication with MARCC and the upload of data to the SSH server to be analyzed. Currently, the program is 
+optimized (by optimized I mean only supports) data from Gaussian09.
 
 If there are any problems, fixes, optimizations, etc. anyone has to offer, feel free email me: [sdawley1@jhu.edu](mailto:sdawley1@jhu.edu). Otherwise, submitting a pull request is always an option.
 
 ## Dependencies
+If using `g09_command`:
+
 [Python](https://www.python.org/) 3.0+ 
 
 [Cryptography](https://cryptography.io/en/latest/) 3.4.7
-
-[Django](https://www.djangoproject.com/) 4.0.1
 
 [Paramiko](https://www.paramiko.org/index.html) 2.8.0 (Primary means of communicating with the SSH server and opening an SFTP)
 
 [PyNaCl](https://pypi.org/project/PyNaCl/) 1.4.0
 
+If using `g09_site` (which I haven't uploaded so probably not):
+
+Everything above as well as [Django](https://www.djangoproject.com/) 4.0.1  
 
 For all of these dependencies, installing is as simple as running `pip install [LIBRARY]` in the command line. The website for each library is linked, all of which have installation instructions. If you're interested in checking the libraries already installed on your computer, you can run `pip list` from the command line.
 
 ## Installation Instructions
 
-Installing the program can be done by cloning this repository to your local machine, navigating to the `g09` directory and running the command `python manage.py runserver` from the command line. Then, in your browser go to [http://localhost:8000](http://localhost:8000) to enter the site. The home page should look something like this:
-<img width="992" alt="Screen Shot 2022-01-17 at 12 00 00 AM" src="https://user-images.githubusercontent.com/92101227/149710765-f6f02404-605d-4e1d-bb91-1ac1d26848d1.png">
+Installing the program can be done by cloning this repository to your local machine, navigating to the `g09_command` directory and running the command `python3 job_submission.py` from within the shell.
 
-In case anyone finds it useful, here are explicit steps to setting up and running the site:
-
-1. Above the list of files on the main page of this repository, click the 'Code' button. Using 'Clone with HTTPS', copy the provided link.
-2. Navigate to the command line (terminal on Mac) and change the current working directory to where you'd like the folder to be saved on your machine. By default, the folder will be saved to your home directory.
-3. Enter `$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY` with the url copied earlier. Press enter to create a local clone of the repository.
-4. Navigate to the folder we just installed (here it's named `g09`) and run the command `$ python manage.py runserver`. Then, in your browser go to the link [http://localhost:8000](http://localhost:8000) to enter the site.
-
-More detailed repository-cloning instructions can be found [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
-but I provided them here as well for clarity.
+In case anyone finds it useful, [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) are explicit steps for cloning a repository.
 
 ## Some Commentary and Guidelines
 
