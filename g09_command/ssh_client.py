@@ -3,9 +3,6 @@ import socket
 import os.path
 import os
 
-# Suppress terminal inputs so people don't steal my password
-os.system('stty -echo')
-
 def ssh_conn(hostname, username, shFile, gjfFile, port):
     """
     Uploads files to MARCC and submits job request.
@@ -74,8 +71,7 @@ def ssh_conn(hostname, username, shFile, gjfFile, port):
         print('Failed to create channel.')
         transport.close()
         os.system('stty echo')
-    except paramiko.ChannelException:
-        print('Failed to invoke interactive shell.')
+    except paramiko.SSHException:
         transport.close()
         os.system('stty echo')
     try:
