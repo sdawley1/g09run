@@ -3,10 +3,6 @@ def write_g09():
     """
     This function attains user information be used in the instruction file sent to MARCC.
 
-    Parameters
-    ----------
-    filepath (str) = String with path to saved data files
-
     Returns
     -------
     user_info (dict) = Dictionary containing all inputs
