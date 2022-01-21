@@ -7,7 +7,6 @@ def gaussian09(info_user):
     Parameters
     ----------
     info_user = info_user dictionary from user_info.write_g09()
-    filepath = directory containing `.sh` and `.gjf` files
     """
 
     with open(info_user['filename'] + '.sh', 'w') as g09file:
